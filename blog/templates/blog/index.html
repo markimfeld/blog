@@ -37,8 +37,8 @@
             {% for post in post_list %}
             <div class="card mb-4">
                 <div class="card-body">
-                    <h2 class="card-title">{{ post.headline }}</h2>
-                    <img src="{{ post.cover.url }}" alt="{{ post.headline }}"/>
+                    <img src="{{ post.cover.url }}" class="mb-4" alt="{{ post.headline }}"/>
+                    <h2 class="card-title display-4">{{ post.headline }}</h2>
                     <p class="card-text text-muted h6">{{ post.author }} | {{ post.pub_date}} </p>
                     <p class="card-text">{{post.body_text|slice:":200" }}</p>
                     <a href="{% url 'blog:post_detail' post.slug  %}" class="btn btn-primary">Read More &rarr;</a>
