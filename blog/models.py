@@ -17,7 +17,7 @@ class Post(models.Model):
 	pub_date = models.DateTimeField(auto_now_add=True)
 	mod_date = models.DateTimeField(auto_now=True)
 	status = models.IntegerField(choices=STATUS, default=0)
-
+	cover = models.ImageField(upload_to='images/')
 
 	class Meta:
 		ordering = ['-pub_date']

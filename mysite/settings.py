@@ -120,3 +120,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+# is the url that we can use for our templates
+MEDIA_URL = '/media/'
+# is the absolute filesystem path
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')

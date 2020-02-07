@@ -38,6 +38,7 @@
             <div class="card mb-4">
                 <div class="card-body">
                     <h2 class="card-title">{{ post.headline }}</h2>
+                    <img src="{{ post.cover.url }}" alt="{{ post.headline }}"/>
                     <p class="card-text text-muted h6">{{ post.author }} | {{ post.pub_date}} </p>
                     <p class="card-text">{{post.body_text|slice:":200" }}</p>
                     <a href="{% url 'blog:post_detail' post.slug  %}" class="btn btn-primary">Read More &rarr;</a>
