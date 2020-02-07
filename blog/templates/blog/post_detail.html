@@ -18,6 +18,7 @@
       <div class="col-md-8 card mb-4  mt-4 left  top">
         <div class="card-body">
           <h1>{% block title %} {{ object.headline }} {% endblock title %}</h1>
+          <img src="{{ post.cover.url }}" alt="{{ post.headline }}" />
           <p class=" text-muted">{{ post.author }} | {{ post.pub_date }}</p>
           <p class="card-text ">{{ object.body_text | safe }}</p>
         </div>
